@@ -39,7 +39,7 @@ int main()
      // {dist,node}
      set<pair<int,int>>st;   // we can also use priority queue instead of set
 
-     st.insert({startingNode,0});
+     st.insert({0,startingNode});
     
      distance[startingNode]=0;
 
@@ -63,7 +63,7 @@ int main()
                {
                 distance[v]=distance[u]+uvDist;
                 parent[v]=u;
-                st.insert({v,distance[v]});
+                st.insert({distance[v],v});
                }
 
           }
