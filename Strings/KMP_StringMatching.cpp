@@ -1,5 +1,9 @@
 //source --> youtube(tushar roy) link=https://www.youtube.com/watch?v=GTJr8OvyEVQ
 
+//applications 
+//1 --> substring matching
+//2--> min insertions to make palindrome (gfg source link)=https://www.geeksforgeeks.org/minimum-characters-added-front-make-string-palindrome/
+
 #include<bits/stdc++.h>
 using namespace std;
 
