@@ -10,8 +10,8 @@ using namespace std;
 
 int nodes=100;  // 0 to 99 
 
-int par[101];
-int sz[101];
+int par[101];  // stores parent of the componant
+int sz[101];   //stores size of the componant
 
 
 
