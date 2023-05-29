@@ -54,7 +54,7 @@ void union_set(vector<int>&sz,int a,int b)
     if(sz[par1]>sz[par2])
     {
         par[par2]=par1;
-        sz[par2]+=sz[par1];
+        sz[par1]+=sz[par1];
 
     }else{
         
