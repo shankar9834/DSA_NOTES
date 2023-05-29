@@ -41,26 +41,27 @@ int find_set(int n)
 //optimisation
 //we attach the tree with the lower size to the one with the bigger size.
 
-void union_set(int a,int b)
+void union_set(vector<int>&sz,int a,int b)
 {
     int par1=find_set(a);
     int par2=find_set(b);
     
     if(par1==par2)
     {
-        cout<<"they are already present in a same componant\n";
-           return ;
+         return ;
     }
-
-    if(sz[a]>sz[b])
+  
+    if(sz[par1]>sz[par2])
     {
-        par[b]=a;
-        sz[b]+=sz[a];
+        par[par2]=par1;
+        sz[par2]+=sz[par1];
 
     }else{
-           par[a]=b;
-           sz[b]+=sz[a];
+        
+           par[par1]=par2;
+           sz[par2]+=sz[par1];
     }
+  
     return ;
         
 }
