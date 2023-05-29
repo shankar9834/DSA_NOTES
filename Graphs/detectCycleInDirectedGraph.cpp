@@ -1,3 +1,4 @@
+//29 may 2023
 //source - https://www.geeksforgeeks.org/detect-cycle-in-a-graph/
 
 
@@ -8,6 +9,21 @@ using namespace std;
 
 
 using namespace std;
+
+/*
+1)Calculate the in-degree (number of incoming edges) for each vertex in the DAG and set the starting value of 
+the visited nodes count to 0.
+2)Select all of the vertices with in-degree values of 0, then enqueue them all.
+3)Add one more visited node to the count after removing a vertex from the queue (Dequeue operation).
+4)For each of its neighbouring nodes or vertices, reduce in-degree by 1.
+5)Add a node or vertex to the queue if the in-degree of any nearby nodes or vertices is lowered to zero.
+ Up until the queue is empty, repeat step 3.
+6)The topological sort is not possible for the provided graph if the number of 
+visited nodes is not equal to the number of graph vertices.
+
+*/
+
+//using bfs --> kahns algorithm
 
 class Graph {
 private:
