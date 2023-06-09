@@ -41,7 +41,7 @@ int find_set(int n)
 //optimisation
 //we attach the tree with the lower size to the one with the bigger size.
 
-void union_set(vector<int>&sz,int a,int b)
+void union_set(int a,int b)
 {
     int par1=find_set(a);
     int par2=find_set(b);
