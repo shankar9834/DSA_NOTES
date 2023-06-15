@@ -11,7 +11,6 @@ int prec(char a)
 }
 
 
-
 void printPostfix(string s)
 {
     stack<char>st;
@@ -33,18 +32,17 @@ void printPostfix(string s)
         }else if(s[i]==')')
         {
             while(!st.empty()&&st.top()!='(')
-            {
+            {                                           
                 cout<<st.top();
                 st.pop();
-                
             }
             if(!st.empty()&&st.top()=='(') st.pop();
 
         }
         else{
+            // if s[i] is not operator then it is always directly printed on console
             cout<<s[i];
         }
-
 
     }
   
@@ -55,6 +53,7 @@ void printPostfix(string s)
         st.pop();
     }
 }
+
 
 
 int main()
