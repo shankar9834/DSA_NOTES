@@ -28,6 +28,7 @@ void updateTree(int si,int s,int e,int ui,int val)
         if(s==e)
         {
             st[si]=val;
+            return ;
         }
 
         int mid=(s+e)/2;
