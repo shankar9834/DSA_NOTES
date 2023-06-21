@@ -27,13 +27,14 @@ void updateTree(int si,int s,int e,int ui,int val)
 {
         if(s==e)
         {
+            arr[ui]=val;
             st[si]=val;
             return ;
         }
 
         int mid=(s+e)/2;
 
-        if(mid<=ui)
+        if(ui<=mid)
         {
             updateTree(2*si+1,s,mid,ui,val);
         }
@@ -42,7 +43,9 @@ void updateTree(int si,int s,int e,int ui,int val)
         }
 
          st[si]=st[2*si+1]+st[2*si+2];
+         return ;
 }
+
 
 
 int queryTree(int si,int s,int e,int qs,int qe)
@@ -60,11 +63,17 @@ int queryTree(int si,int s,int e,int qs,int qe)
 
 }
 
+
 int main()
 {
       buildTree(0,0,6);
-
+     
       cout<<queryTree(0,0,6,0,6)<<endl;
-      cout<<queryTree(0,0,6,2,5)<<endl;
+      
+    updateTree(0,0,6,2,5);
+      
+     
+      cout<<queryTree(0,0,6,0,6)<<endl;
+     
 
 }
