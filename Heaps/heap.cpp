@@ -159,7 +159,7 @@ int main()
       {
         //heapify fun makes sure that element at index i should be placed at correct position in heap
        // from index i to n ,heapify function makes heap
-       
+        
         heapify(arr,n,i);
       }
     for(int i=1;i<=n;i++)
