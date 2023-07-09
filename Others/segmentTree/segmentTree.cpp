@@ -33,7 +33,7 @@ int query(int segIndex,int start,int end,int queryStart,int queryEnd,vector<int>
              // if query start and query end both lie outside the array range of original array (arr) 
              if(start>queryEnd||queryStart>end) return INT_MAX;
 
-            // if query start and query end lie inside in the range of original array (arr)
+            // current range is inside the query range
              if(start>=queryStart&&end<=queryEnd) return sT[segIndex];
              
              int mid=(start+end)/2;
