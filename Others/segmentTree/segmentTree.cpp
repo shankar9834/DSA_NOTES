@@ -78,10 +78,11 @@ int main()
 
     build(0,0,n-1,arr);
     
+    cout<<query(0,0,n-1,1,3,arr)<<endl;
 
         
 
-        cout<<"update index : ";
+        /* cout<<"update index : ";
         int index;
         cin>>index;
         cout<<"enter value: ";
@@ -96,7 +97,7 @@ int main()
 
         cout<<"after updating minimum value in range "<<x<<" and "<<y<<" is "<<query(0,0,n-1,x,y,arr)<<endl;
 
-    
+     */
     
 
 }
