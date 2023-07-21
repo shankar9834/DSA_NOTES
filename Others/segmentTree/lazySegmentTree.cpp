@@ -21,6 +21,7 @@ void build(int si,int ss,int se,vector<int>&arr)
      sT[si]=sT[2*si+1]+sT[2*si+2];
 }
 
+
 int queryLazy(int si,int ss,int se,int qs,int qe)
 {
        if(lazy[si]!=0)
