@@ -1,7 +1,7 @@
 // 25 march 2023
 // Author -- shankar wangwad
 
-// dijkstra algorithm is used to find shortest path from starting node to all nodes in a weighted graph 
+// dijkstra algorithm is used to find shortest path from starting node to all nodes in a weighted graph (single source shortest path)
 
 #include<bits/stdc++.h>
 using namespace std;
