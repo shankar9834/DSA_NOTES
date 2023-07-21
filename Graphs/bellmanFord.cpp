@@ -55,21 +55,21 @@ void solve()
 
     }
     else {
-        int y = x;
-        for (int i = 0; i < n; ++i)
-            y = p[y];
+       for (int i = 0; i < n; ++i)
+            x = p[x];
 
-        vector<int> path;
-        for (int cur = y;; cur = p[cur]) {
-            path.push_back(cur);
-            if (cur == y && path.size() > 1)
+        vector<int> cycle;
+        for (int v = x;; v = p[v]) {
+            cycle.push_back(v);
+            if (v == x && cycle.size() > 1)
                 break;
         }
-        reverse(path.begin(), path.end());
+        reverse(cycle.begin(), cycle.end());
 
         cout << "Negative cycle: ";
-        for (int u : path)
-            cout << u << ' ';
+        for (int v : cycle)
+            cout << v << ' ';
+        cout << endl;
     }
 }
 
