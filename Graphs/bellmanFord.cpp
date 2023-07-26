@@ -3,6 +3,7 @@
 // used to detect negative weight cycle 
 // if negative cycle is not present then it also calculates shortest path from node v to node t(single source shortest path)
 
+
 #include<bits/stdc++.h>
 using namespace std;
 
