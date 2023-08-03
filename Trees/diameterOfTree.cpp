@@ -15,12 +15,61 @@
 
 
 
-
 #include<bits/stdc++.h>
 using namespace std;
+#define ll long long
 
 int lev[200005];
 int vis[200005];
+
+int diameter=0;
+
+ll solve(int node,unordered_map<int,vector<int>>&tree)
+{
+      vis[node]=1;
+      vector<int>depths;
+         int mx=0;
+     
+      for(auto child:tree[node])
+      {
+       
+          if(!vis[child])
+          {      
+             
+              solve(child,tree);
+              mx=max(mx,lev[child]);
+              depths.push_back(lev[child]);
+          }
+      }
+      sort(depths.begin(),depths.end());
+       lev[node]=mx+1;
+      if(depths.size()==1)diameter=max(diameter,depths[0]);
+      else if(depths.size()>1)diameter=max(diameter,depths[depths.size()-1]+depths[depths.size()-2]);
+    return lev[node];  
+
+}
+
+
+
+void method2()
+{
+       int n;
+   cin>>n;
+   int edges=n-1;
+   unordered_map<int,vector<int>>tree;
+   while(edges--)
+   {
+       int x, y;
+       cin>>x>>y;
+       tree[x].push_back(y);
+       tree[y].push_back(x);
+   }
+   
+   solve(1,tree);
+   cout<<diameter<<endl;
+}
+
+
 
 
 void bfs(int node,unordered_map<int,vector<int>>&tree)
@@ -99,8 +148,9 @@ void method1()
    cout<<mx<<endl;
 }
 
+
 int main()
 {
    method1();  
-
+   method2();  //using dp
 }
