@@ -31,8 +31,8 @@ int query(int segIndex,int start,int end,int queryStart,int queryEnd,vector<int>
 {
              
              // if query start and query end both lie outside the array range of original array (arr) 
-             if(start>queryEnd||queryStart>end) return INT_MAX;
-
+             if(start>queryEnd||queryStart>end) return INT_MAX;  // if we use max segment tree instead of min seg tree then
+                                                                 // change INT_MAX to INT_MIN 
             // current range is inside the query range
              if(start>=queryStart&&end<=queryEnd) return sT[segIndex];
              
