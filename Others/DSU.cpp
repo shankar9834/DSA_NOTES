@@ -35,7 +35,7 @@ int find_set(int n)
         return n;
      }
 
-     par[n]=find_set(par[n]);
+    return par[n]=find_set(par[n]);
 }
 
 //optimisation
