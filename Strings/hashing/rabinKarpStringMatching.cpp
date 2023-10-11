@@ -5,7 +5,7 @@
 using namespace std;
 
 vector<int> rabin_karp(string const& s, string const& t) {
-    const int p = 31; 
+    const int p = 31; // BASE should be a prime number >= maximum the maximum of all numbers, here I choose (31 which is greater than 26(number of alphabets))
     const int m = 1e9 + 9;
     int S = s.size(), T = t.size();
 
