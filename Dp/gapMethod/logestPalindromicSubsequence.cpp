@@ -2,6 +2,8 @@
 //yt pepcoding - https://www.youtube.com/watch?v=WpYHNHofwjc 
 //11 Oct 2023
 
+// tc O(n*n)  there is other algorithm called manachers algortihm for longest palindromic substring works in O(n) 
+// sc O(n*n)
 #include<bits/stdc++.h>
 using namespace std;
 
